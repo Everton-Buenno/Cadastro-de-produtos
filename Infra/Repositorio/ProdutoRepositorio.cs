@@ -42,7 +42,7 @@ namespace Infra.Repositorio
 
         public async Task<List<Produtos>> ObterTodos()
         {
-            return await _context.Set<Produtos>().AsNoTracking().ToListAsync();
+            return await _context.Set<Produtos>().AsNoTracking().OrderBy(p => p.Valor).ToListAsync();
         }
     }
 }
