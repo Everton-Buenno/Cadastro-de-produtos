@@ -26,7 +26,7 @@
                     @Html.DisplayNameFor(model => model.Valor)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Disponibilidade)
+                    Disponivel
                 </th>
                 <th></th>
             </tr>
@@ -48,11 +48,11 @@
                     <td>
                         @if (item.Disponibilidade == 1)
                         {
-                            <span>Disponível</span>
+                            <span>Sim</span>
                         }
                         else
                         {
-                            <span>Esgotado</span>
+                            <span>Não</span>
                         }
                     </td>
 
