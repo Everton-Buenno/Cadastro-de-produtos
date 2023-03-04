@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Cadastro.Prod.Web.ViewModels.ProdutoViewModel>
+
+
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a class="btn btn-info" asp-action="Adicionar">Novo Produto</a>
+</p>
+
+<div class=" table-responsive">
+    <table class="table table-striped">
+        <thead class="table-header">
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Valor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Disponibilidade)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="table-data">
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @if (item.Disponibilidade == 1)
+                        {
+                            <span>Disponível</span>
+                        }
+                        else
+                        {
+                            <span>Esgotado</span>
+                        }
+                    </td>
+
+                    <td class="text-right">
+                        <a class="btn btn-sm table-button" asp-action="Editar" asp-route-id="@item.ProdutoId"><spam class="fa fa-pencil-alt"></spam> </a>
+                        <a class="btn btn-sm table-action-button" asp-action="Delete" asp-route-id="@item.ProdutoId"><spam class="fa fa-trash"></spam>  </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

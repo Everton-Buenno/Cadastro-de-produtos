@@ -1,0 +1,114 @@
+
+
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #2c3e50;
+}
+
+    .btn-primary:hover {
+        background-color: #72a7d3;
+        color: #000;
+    }
+
+.btn-info {
+    background-color: #212429;
+    color: #fff;
+}
+
+    .btn-info:hover {
+        background-color: #72a7d3;
+        color: #000;
+    }
+
+
+/*table css*/
+
+:root {
+    --azul-claro: #72a7d3;
+    --azul-escuro: #2c3e50;
+    --branco: #e5e5e5;
+    --dark: #212429;
+    --laranja: #ee6b4d;
+    --cinza: #e5e5e5
+}
+
+/* Estilo para o cabeçalho da tabela */
+.table-header {
+    background-color: var(--dark);
+    color: var(--branco);
+}
+
+/* Estilo para as células de dados da tabela */
+.table-data {
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+}
+
+/* Estilo para os botões da tabela */
+.table-button {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+/* Estilo para os botões de ação na tabela */
+.table-action-button {
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+}
+
+    /* Estilo para os ícones dos botões de ação na tabela */
+    .table-action-button .fa {
+        color: var(--laranja);
+    }
+
+    .table-action-button:hover .fa {
+        color: var(--dark);
+    }
+
+/* Estilo para as linhas zebradas */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--azul-claro);
+    color: var(--dark);
+}
+
+/* Estilo para os links na tabela */
+.table-link {
+    color: var(--azul-claro);
+}
+
+/* Estilo para o rodapé da tabela */
+.table-footer {
+    background-color: var(--azul-claro);
+    color: var(--branco);
+}

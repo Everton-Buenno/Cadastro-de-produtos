@@ -1,0 +1,24 @@
+﻿@model Cadastro.Prod.Web.ViewModels.ProdutoViewModel
+
+@{
+    ViewData["Title"] = "Excluir " + Model.Nome;
+}
+
+<div class="card d-flex align-items-center">
+    <div class="card-body text-center" style="padding-top: 50px;">
+        <h4>@ViewData["Title"]</h4>
+        <h5 class="mt-5">Você tem certeza que quer excluir @ViewData["Title"]?</h5>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProdutoId" />
+        <div class="form-group mt-5 p-4">
+            <input type="submit" value="Excluir" class="btn btn-primary" />
+            <a class="btn btn-info" asp-action="Index">Voltar</a>
+        </div>
+    </form>
+</div>
+
+
+
+
